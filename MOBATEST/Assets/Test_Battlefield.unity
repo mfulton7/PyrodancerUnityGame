@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 1466627422}
   - component: {fileID: 1466627421}
   - component: {fileID: 1466627420}
+  - component: {fileID: 1466627426}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -473,6 +474,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466627426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466627419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c26df8749cf5f4aaffd7a4605b265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  Armor_Rating: 0
 --- !u!1 &1480050850
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +499,7 @@ GameObject:
   - component: {fileID: 1480050853}
   - component: {fileID: 1480050852}
   - component: {fileID: 1480050851}
+  - component: {fileID: 1480050856}
   m_Layer: 0
   m_Name: Test
   m_TagString: Enemy
@@ -567,13 +582,26 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1480050850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.21, y: 4.86, z: 1.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.08635432, z: -0, w: 0.9962645}
+  m_LocalPosition: {x: 1.12, y: 4.86, z: 1.33}
+  m_LocalScale: {x: 1.2789924, y: 0.99999994, z: 1.0972664}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 9.908001, z: 0}
+--- !u!114 &1480050856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1480050850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c26df8749cf5f4aaffd7a4605b265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 10
+  Armor_Rating: 0
 --- !u!1 &1596457481
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,8 +31,12 @@ public class Turret : MonoBehaviour {
         {
             if (Target_List.Count > 0)
             {
-                Vector3 towerToTarget = Target_List[0].gameObject.transform.position - GetComponent<Transform>().position;
-                Attack(towerToTarget);
+                //temp check for null needs redone when we fix 0
+                if (Target_List[0] != null)
+                {
+                    Vector3 towerToTarget = Target_List[0].gameObject.transform.position - GetComponent<Transform>().position;
+                    Attack(towerToTarget);
+                }
             }
             Attack_Timer = Time_Between_Attacks;
         }
