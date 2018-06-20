@@ -16,11 +16,20 @@ public class Impact : MonoBehaviour {
 		
 	}
 
+    void fixedUpdate()
+    {
+        //transform.position = ;
+    }
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<Defenses>().TakeDamage(Damage);
+
+            // Remove when we have a bullet manager
+
+            Destroy(gameObject);
         }
     }
 }

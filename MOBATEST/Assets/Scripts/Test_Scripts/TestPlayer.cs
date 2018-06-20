@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class TestPlayer : MonoBehaviour {
 
-    public int player_health;
     public float player_speed;
 
     private Vector3 movement;
     private Rigidbody playerRigidbody;
+    private Vector3 moveDirection;
+    private Transform transformer;
 
     void Start () {
         playerRigidbody = GetComponent<Rigidbody>();
+        transformer = transform;
     }
 	
 	void Update () {
@@ -19,15 +21,17 @@ public class TestPlayer : MonoBehaviour {
 
     void FixedUpdate()
     {
+        // Get Axises
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-        MovePlayer(h, v);
+
+        // Modifier if player is going diag or not
+        float inputModifyFactor = (h != 0.0f && v != 0.0f) ? .7071f : 1.0f;
+
+        // Move player in that direction
+        moveDirection = new Vector3(h * inputModifyFactor, 0, v * inputModifyFactor);
+        moveDirection = transformer.TransformDirection(moveDirection) * player_speed;
+        playerRigidbody.MovePosition(transform.position + moveDirection * Time.deltaTime);
     }
 
-    void MovePlayer(float h, float v)
-    {
-        movement.Set(h, 0f, v);
-        movement = movement.normalized * player_speed * Time.deltaTime;
-        playerRigidbody.MovePosition(transform.position + movement);        
-    }
 }
