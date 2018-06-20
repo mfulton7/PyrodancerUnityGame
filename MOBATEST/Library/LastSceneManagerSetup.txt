@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Test_Battlefield.unity
+- path: Assets/Test_Battlefield/Test_Battlefield.unity
   isLoaded: 1
   isActive: 1
