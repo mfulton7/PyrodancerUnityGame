@@ -5,8 +5,10 @@ using UnityEngine;
 public class TestCamera : MonoBehaviour {
 
     public GameObject player;
+    public float mouse_sensitivity;
 
     private Vector3 offset;
+    private float mouseX;
 
     void Start()
     {
@@ -15,7 +17,14 @@ public class TestCamera : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        transform.position = player.transform.position + offset;
+        if (player)
+        {
+            mouseX = Input.GetAxis("Mouse X") * mouse_sensitivity;
+            transform.Rotate(0, mouseX, 0);
+            player.transform.Rotate(0, mouseX, 0);
+
+            transform.position = player.transform.position + offset;
+        }
 	}
 
 }

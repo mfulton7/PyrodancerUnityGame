@@ -66,13 +66,14 @@
     <Compile Include="Assets\Scripts\Target_Setter.cs" />
     <Compile Include="Assets\Scripts\Test_Scripts\TestCamera.cs" />
     <Compile Include="Assets\Scripts\Test_Scripts\TestPlayer.cs" />
+    <Compile Include="Assets\Scripts\Test_Scripts\TestUI.cs" />
     <Compile Include="Assets\Scripts\TroopSpawner.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Wes/Desktop/Unity Projects/PyrodancerUnityGame-master/MOBATEST/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Wes/Desktop/Unity Projects/PyrodancerUnityGame/MOBATEST/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Wes/Desktop/Unity Projects/PyrodancerUnityGame-master/MOBATEST/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Wes/Desktop/Unity Projects/PyrodancerUnityGame/MOBATEST/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

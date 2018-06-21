@@ -2,26 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Defenses : MonoBehaviour {
+public class Defenses : MonoBehaviour
+{
 
-    public float Health;
-    public float Armor_Rating;
+    public int Health;
+    public int Armor_Rating;
+    public Vector3 respawnPoint;
+    public int currentHealth;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Health <= 0f)
+    // Use this for initialization
+    void Start()
+    {
+        currentHealth = Health;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (currentHealth <= 0f)
         {
-            Destroy(gameObject);
+            transform.position = respawnPoint;
+            currentHealth = Health;
+
         }
-	}
+    }
 
     public void TakeDamage(int Damage)
     {
-        Health = Health - (Damage);
+        currentHealth = currentHealth - (Damage);
     }
 }
